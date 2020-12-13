@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "82a1114f-f447-42d0-95c9-95be0fede9ef",
+		"name": "deetos-auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{URL}}/user/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"dhruv\",\r\n    \"email\":\"dhruvprajapati.softvan@gmail.com\",\r\n    \"password\": \"dhruv@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/user/register",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL}}/user/activation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"activation_token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZGhydXYiLCJlbWFpbCI6ImRocnV2cHJhamFwYXRpLnNvZnR2YW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVXlLUzJLeGIxaDlFR3lYdVhWb0hKZVY1ZkE0TjhaQXcuclFEcUphU1NUS1VacmRHR3YvOTIiLCJpYXQiOjE2MDY1NjYzMTQsImV4cCI6MTYwNjU2NjYxNH0.oI_6R9SsiVZvEZzvc9kkYGa8Y1SaPlwcnJDmtwTHdm4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/user/activation",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"activation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL}}/user/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"dhruvprajapati.softvan@gmail.com\",\r\n    \"password\":\"dhruv@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/user/login",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL}}/user/refresh_token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"dhruvprajapati.softvan@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/user/refresh_token",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"refresh_token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL}}/user/forgot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"dhruvprajapati.softvan@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/user/forgot",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"forgot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL}}/user/reset",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYzI0MjZjZjI2NTk0MjU0NDZlMzc1OSIsImlhdCI6MTYwNjU2ODYxNCwiZXhwIjoxNjA2NTY5NTE0fQ.NC5XFvoJaxK-i0EJYGZJwzD6rGGZimeIv9YFSzoCd1s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"imdhruv@99\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/user/reset",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"reset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL}}/user/info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYzI0MjZjZjI2NTk0MjU0NDZlMzc1OSIsImlhdCI6MTYwNjU2ODYxNCwiZXhwIjoxNjA2NTY5NTE0fQ.NC5XFvoJaxK-i0EJYGZJwzD6rGGZimeIv9YFSzoCd1s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"imdhruv@99\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/user/info",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL}}/user/all_info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYzI1MDY5MWUxZGZiMzljNDkyOTY1YyIsImlhdCI6MTYwNjU3MDY5MCwiZXhwIjoxNjA2NTcxNTkwfQ.MWogjzvB6w9sxruTqc8Kibn39cP8wXtNDJEQADkaxVk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"dhruv@12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/user/all_info",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"all_info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL}}/user/update",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYzI0ZmQ5MWUxZGZiMzljNDkyOTY1YiIsImlhdCI6MTYwNjU3MTQzMywiZXhwIjoxNjA2NTcyMzMzfQ.-Tga0a6bGuYo_GCi2t8kIiddNnChVJqGogDM7dyx73U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"imdhruv99\",\r\n    \"avatar\":\"https://res.cloudinary.com/ddkekjhir/image/upload/v1606561978/avatar/17_zatawy.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/user/update",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL}}/user/update_role/5fc250691e1dfb39c492965c",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYzI0ZmQ5MWUxZGZiMzljNDkyOTY1YiIsImlhdCI6MTYwNjU3MjAyNSwiZXhwIjoxNjA2NTcyOTI1fQ.18zhzFASlixq5S0MmNpU56RYvlKMv7luN3NfLGXDbz0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"role\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/user/update_role/5fc250691e1dfb39c492965c",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"update_role",
+						"5fc250691e1dfb39c492965c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL}}/user/delete/5fc250691e1dfb39c492965c",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYzI0ZmQ5MWUxZGZiMzljNDkyOTY1YiIsImlhdCI6MTYwNjU3MjM2NiwiZXhwIjoxNjA2NTczMjY2fQ.2-zgj2NqOFJaMssV_dnW45cHy0YIGJpDb5snd-AVe4w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/user/delete/5fc250691e1dfb39c492965c",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"delete",
+						"5fc250691e1dfb39c492965c"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
